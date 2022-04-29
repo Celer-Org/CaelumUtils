@@ -127,11 +127,11 @@ $utilities: (
                 )
         ),
         "border-radius": (
-                "prefix": "radius",
+                "prefix": "rounded",
                 "values": (
                         "default": $default-border-radius,
                         "none": 0,
-                        "xs": math.div($default-border-radius, 4),
+                        "xs": math.div($default-border-radius, 5),
                         "sm": math.div($default-border-radius, 3),
                         "md": math.div($default-border-radius, 2),
                         "lg": $default-border-radius * 1.5,
