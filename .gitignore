@@ -1,2 +1,8 @@
 node_modules
 css
+.sass-cache/
+caelum/**/*.css
+caelum/**/*.css.map
+*.css.map
+*.sass.map
+*.scss.map
