@@ -1,0 +1,29 @@
+$primary: #197BBD !default;
+$secondary: #8ea7d2 !default;
+$success: #4CB963 !default;
+$danger: #D12335 !default;
+$warning: #F18701 !default;
+
+$colors: (
+        "primary": $primary,
+        "secondary": $secondary,
+        "success": $success,
+        "danger": $danger,
+        "warning": $warning,
+        "black": black,
+        "white": white
+);
+
+$default-padding: 0.75rem !default;
+$default-margin: 0.75rem !default;
+
+$default-border-thickness: 1px !default;
+$default-border-radius: 20px !default;
+
+$default-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1) !default;
+
+$default-font-size: 1rem !default;
+$font-size-xs: $default-font-size * 0.75 !default;
+$font-size-sm: $default-font-size * 1.5 !default;
+$font-size-md: $default-font-size * 2 !default;
+$font-size-lg: $default-font-size * 3 !default;

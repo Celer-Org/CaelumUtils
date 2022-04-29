@@ -1,0 +1,197 @@
+@use 'sass:math';
+
+$utilities: (
+        "padding": (
+                "prefix": "p",
+                "values": (
+                        "0": 0,
+                        "1": $default_padding,
+                        "2": $default_padding * 2,
+                        "3": $default_padding * 4,
+                        "4": $default_padding * 6,
+                        "5": $default_padding * 8,
+                ),
+        ),
+        "padding-left": (
+                "prefix": "pl",
+                "values": (
+                        "0": 0,
+                        "1": $default_padding,
+                        "2": $default_padding * 2,
+                        "3": $default_padding * 4,
+                        "4": $default_padding * 6,
+                        "5": $default_padding * 8,
+                ),
+        ),
+        "padding-right": (
+                "prefix": "pr",
+                "values": (
+                        "0": 0,
+                        "1": $default_padding,
+                        "2": $default_padding * 2,
+                        "3": $default_padding * 4,
+                        "4": $default_padding * 6,
+                        "5": $default_padding * 8,
+                ),
+        ),
+        "padding-top": (
+                "prefix": "pt",
+                "values": (
+                        "0": 0,
+                        "1": $default_padding,
+                        "2": $default_padding * 2,
+                        "3": $default_padding * 4,
+                        "4": $default_padding * 6,
+                        "5": $default_padding * 8,
+                ),
+        ),
+        "padding-bottom": (
+                "prefix": "pb",
+                "values": (
+                        "0": 0,
+                        "1": $default_padding,
+                        "2": $default_padding * 2,
+                        "3": $default_padding * 4,
+                        "4": $default_padding * 6,
+                        "5": $default_padding * 8,
+                ),
+        ),
+        "margin": (
+                "prefix": "m",
+                "values": (
+                        "0": 0,
+                        "1": $default-margin,
+                        "2": $default-margin * 2,
+                        "3": $default-margin * 4,
+                        "4": $default-margin * 6,
+                        "5": $default-margin * 8,
+                ),
+        ),
+        "margin-left": (
+                "prefix": "ml",
+                "values": (
+                        "0": 0,
+                        "1": $default-margin,
+                        "2": $default-margin * 2,
+                        "3": $default-margin * 4,
+                        "4": $default-margin * 6,
+                        "5": $default-margin * 8,
+                ),
+        ),
+        "margin-right": (
+                "prefix": "mr",
+                "values": (
+                        "0": 0,
+                        "1": $default-margin,
+                        "2": $default-margin * 2,
+                        "3": $default-margin * 4,
+                        "4": $default-margin * 6,
+                        "5": $default-margin * 8,
+                ),
+        ),
+        "margin-top": (
+                "prefix": "mt",
+                "values": (
+                        "0": 0,
+                        "1": $default-margin,
+                        "2": $default-margin * 2,
+                        "3": $default-margin * 4,
+                        "4": $default-margin * 6,
+                        "5": $default-margin * 8,
+                ),
+        ),
+        "margin-bottom": (
+                "prefix": "mb",
+                "values": (
+                        "0": 0,
+                        "1": $default-margin,
+                        "2": $default-margin * 2,
+                        "3": $default-margin * 4,
+                        "4": $default-margin * 6,
+                        "5": $default-margin * 8,
+                ),
+        ),
+        "opacity": (
+                "prefix": "opacity",
+                "values": (
+                        "10": 0.1,
+                        "20": 0.2,
+                        "30": 0.3,
+                        "40": 0.4,
+                        "50": 0.5,
+                        "60": 0.6,
+                        "70": 0.7,
+                        "80": 0.8,
+                        "90": 0.9,
+                        "100": 1,
+                )
+        ),
+        "border-radius": (
+                "prefix": "radius",
+                "values": (
+                        "default": $default-border-radius,
+                        "none": 0,
+                        "xs": math.div($default-border-radius, 4),
+                        "sm": math.div($default-border-radius, 3),
+                        "md": math.div($default-border-radius, 2),
+                        "lg": $default-border-radius * 1.5,
+                        "full": 50%
+                )
+        ),
+        "display": (
+                "prefix": "display",
+                "values": (
+                        "none": none,
+                        "block": block,
+                        "flex": flex,
+                        "inline": inline,
+                        "inline-block": inline-block
+                )
+        ),
+        "font-size": (
+                "prefix": "font-size",
+                "values": (
+                        "xs": $font-size-xs,
+                        "s": $font-size-sm,
+                        "md": $font-size-md,
+                        "lg": $font-size-lg
+                )
+        ),
+        "cursor": (
+                "prefix": "cursor",
+                "values": (
+                        "default": default,
+                        "crosshair": crosshair,
+                        "move": move,
+                        "cell": cell,
+                        "col-resize": col-resize,
+                        "grab": grab,
+                        "grabbing": grabbing,
+                        "help": help,
+                        "not-allowed": not-allowed,
+                        "none": none,
+                        "pointer": pointer,
+                        "progress": progress,
+                        "wait": wait,
+                        "zoom-in": zoom-in,
+                        "zoom-out": zoom-out
+                )
+        )
+);
+
+@each $property, $map in $utilities {
+  $prefix: map-get($map, "prefix");
+  $values: map-get($map, "values");
+
+  @each $key, $value in $values {
+    @if ($key == "default") {
+      .#{$prefix} {
+        #{$property}: $value;
+      }
+    } @else {
+      .#{$prefix}-#{$key} {
+        #{$property}: $value;
+      }
+    }
+  }
+}
