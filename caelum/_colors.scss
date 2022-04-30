@@ -1,10 +1,6 @@
 @each $key, $color in $colors {
   .color-#{$key} {
     color: $color;
-
-    &:hover {
-      color: $color;
-    }
   }
 
   .bg-#{$key} {
