@@ -3,12 +3,14 @@
     background-color: $color;
     padding: 10px;
     border-radius: $default-border-radius - 10px;
+
     .alert-title {
-        color: $white;
-        font-size: xx-large;
+      color: map-get($colors, "white");
+      font-size: xx-large;
     }
+
     .alert-text {
-        color: $white;
+      color: map-get($colors, "white");
     }
   }
 }

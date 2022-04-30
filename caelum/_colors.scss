@@ -6,4 +6,24 @@
   .bg-#{$key} {
     background-color: $color
   }
+
+  @if ($color != black and $color != white) {
+    @for $i from 1 through 9 {
+      .color-light-#{$i*100}-#{$key} {
+        color: mix(white, $color, $i * 10);
+      }
+      .bg-light-#{$i*100}-#{$key} {
+        background-color: mix(white, $color, $i * 10);
+      }
+    }
+
+    @for $i from 1 through 9 {
+      .color-dark-#{$i*100}-#{$key} {
+        color: mix(black, $color, $i * 10);
+      }
+      .bg-dark-#{$i*100}-#{$key} {
+        background-color: mix(black, $color, $i * 10);
+      }
+    }
+  }
 }

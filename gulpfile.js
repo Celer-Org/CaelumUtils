@@ -6,7 +6,7 @@ const cleanCSS = require('gulp-clean-css')
 function buildStyles() {
     return src('caelum/**/*.scss')
         .pipe(sass())
-        .pipe(purgecss({content: ['*.html']}))
+        //.pipe(purgecss({content: ['*.html']}))
         //.pipe(cleanCSS({compatibility: 'ie8'})) // minify CSS
         .pipe(dest('css'))
 }
