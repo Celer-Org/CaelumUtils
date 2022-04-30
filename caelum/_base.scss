@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 
-/* Reset styles */
 * {
   color: inherit;
   margin: 0;
@@ -8,6 +7,7 @@
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
+  background-color: #f3f4f6;
 }
 
 ul {
@@ -28,18 +28,22 @@ img {
   max-width: 100%;
 }
 
-.color-primary {
-  color: $primary;
+button {
+  border: none;
 }
 
-.color-success {
-  color: $success;
+::-webkit-scrollbar {
+  width: 10px;
 }
 
-.color-danger {
-  color: $danger;
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
 }
 
-.color-warning {
-  color: $warning;
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

@@ -176,6 +176,18 @@ $utilities: (
                         "zoom-in": zoom-in,
                         "zoom-out": zoom-out
                 )
+        ),
+        "box-shadow": (
+                "prefix": "shadow",
+                "values": (
+                        "sm": rgba(149, 157, 165, 0.2) 0px 8px 24px
+                )
+        ),
+        "border": (
+                "prefix": "border",
+                "values": (
+                        "0": 0
+                )
         )
 );
 
