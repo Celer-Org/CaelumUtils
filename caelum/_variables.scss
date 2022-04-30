@@ -3,6 +3,10 @@ $secondary: #8b5cf6 !default;
 $success: #34d399 !default;
 $danger: #ef4444 !default;
 $warning: #f97316 !default;
+$dark: rgb(17, 17, 17) !default;
+$light: #f4f4f4 !default;
+$black: #000 !default;
+$white: #fff !default;
 
 $colors: (
         "primary": $primary,
@@ -10,6 +14,8 @@ $colors: (
         "success": $success,
         "danger": $danger,
         "warning": $warning,
+        "dark": $dark,
+        "light": $light,
         "black": black,
         "white": white
 );

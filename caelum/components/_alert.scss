@@ -1,0 +1,14 @@
+@each $key, $color in $colors {
+  .alert-#{$key} {
+    background-color: $color;
+    padding: 10px;
+    border-radius: $default-border-radius - 10px;
+    .alert-title {
+        color: $white;
+        font-size: xx-large;
+    }
+    .alert-text {
+        color: $white;
+    }
+  }
+}

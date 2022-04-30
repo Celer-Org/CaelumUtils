@@ -5,7 +5,26 @@
     border-radius: $default-border-radius - 10px;
 
     &:hover {
+      color: $white;
       background-color: darken($color, 5%);
+    }
+  }
+  .outline-#{$key} {
+    background-color: transparent;
+    border: 1px solid $color;
+    padding: 10px 35px;
+    border-radius: $default-border-radius - 10px;
+
+    &:hover {
+      @if $key == "light" {
+        color: $black;
+        background-color: darken($color, 5%);
+        border-color: darken($color, 5%);
+      } @else {
+        color: $white;
+        background-color: darken($color, 5%);
+        border-color: darken($color, 5%);
+      }
     }
   }
 }
