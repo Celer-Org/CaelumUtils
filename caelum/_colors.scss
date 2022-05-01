@@ -7,6 +7,10 @@
     background-color: $color
   }
 
+  .border-color-#{$key} {
+    border-color: $color;
+  }
+
   @if ($color != black and $color != white) {
     @for $i from 1 through 9 {
       .color-light-#{$i*100}-#{$key} {
@@ -14,6 +18,9 @@
       }
       .bg-light-#{$i*100}-#{$key} {
         background-color: mix(white, $color, $i * 10);
+      }
+      .border-color-light-#{$i*100}-#{$key} {
+        border-color: mix(white, $color, $i * 10);
       }
     }
 
@@ -23,6 +30,9 @@
       }
       .bg-dark-#{$i*100}-#{$key} {
         background-color: mix(black, $color, $i * 10);
+      }
+      .border-color-dark-#{$i*100}-#{$key} {
+        border-color: mix(black, $color, $i * 10);
       }
     }
   }

@@ -183,10 +183,23 @@ $utilities: (
                         "sm": rgba(149, 157, 165, 0.2) 0px 8px 24px
                 )
         ),
-        "border": (
+        "border-width": (
                 "prefix": "border",
                 "values": (
-                        "0": 0
+                        "0": 0,
+                        "1": thin,
+                        "2": medium,
+                        "3": thick,
+                )
+        ),
+        "border-style": (
+                "prefix": "border-style",
+                "values": (
+                        "dotted": dotted,
+                        "dashed": dashed,
+                        "solid": solid,
+                        "double": double,
+                        "groove": groove,
                 )
         ),
         "text-align": (
