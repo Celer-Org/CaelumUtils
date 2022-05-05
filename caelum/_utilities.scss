@@ -207,6 +207,29 @@ $utilities: (
                 "values": (
                         "center": center
                 )
+        ),
+        "filter": (
+                "prefix": "filter",
+                "values": (
+                        "blur": blur(6px),
+                        "contrast": contrast(30%),
+                        "grayscale": grayscale(1),
+                        "invert": invert(70%),
+                        "opacity": opacity(30%),
+                        "sepia": sepia(1)
+                )
+        ),
+        "align-items": (
+                "prefix": "align-items",
+                "values": (
+                        "center": center
+                )
+        ),
+        "justify-content": (
+                "prefix": "justify-content",
+                "values": (
+                        "center": center
+                )
         )
 );
 
@@ -219,8 +242,32 @@ $utilities: (
       .#{$prefix} {
         #{$property}: $value;
       }
+
+      .hover\:#{$prefix}:hover {
+        #{$property}: $value;
+      }
+
+      .active\:#{$prefix}:active {
+        #{$property}: $value;
+      }
+
+      .focus\:#{$prefix}:focus {
+        #{$property}: $value;
+      }
     } @else {
       .#{$prefix}-#{$key} {
+        #{$property}: $value;
+      }
+
+      .hover\:#{$prefix}-#{$key}:hover {
+        #{$property}: $value;
+      }
+
+      .active\:#{$prefix}-#{$key}:active {
+        #{$property}: $value;
+      }
+
+      .focus\:#{$prefix}-#{$key}:focus {
         #{$property}: $value;
       }
     }

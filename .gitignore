@@ -1,7 +1,6 @@
 node_modules
 css
 .sass-cache/
-docs
 caelum/**/*.css
 caelum/**/*.css.map
 *.css.map

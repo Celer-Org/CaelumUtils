@@ -4,19 +4,32 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "docs": "topdoc css/index.css"
+    "start": "gulp"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "browserslist": [
+    "> 2%"
+  ],
   "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "cssnano": "^5.1.7",
+    "cssnano-preset-advanced": "^5.3.3",
     "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.1",
     "gulp-purgecss": "^4.1.3",
     "gulp-sass": "^5.1.0",
-    "sass": "^1.50.1",
-    "topdoc": "^2.0.4"
+    "postcss": "^8.4.13",
+    "postcss-advanced-variables": "^3.0.1",
+    "postcss-apply": "^0.12.0",
+    "postcss-cli": "^9.1.0",
+    "postcss-nested": "^5.0.6",
+    "postcss-scss": "^4.0.4",
+    "sass": "^1.50.1"
   },
   "dependencies": {
-    "gulp-clean-css": "^4.3.0"
+    "gulp-clean-css": "^4.3.0",
+    "postcss-merge-rules": "^5.1.1"
   }
 }

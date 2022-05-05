@@ -11,6 +11,18 @@
     border-color: $color;
   }
 
+  .hover\:color-#{$key}:hover {
+    color: $color;
+  }
+
+  .hover\:bg-#{$key}:hover {
+    background-color: $color
+  }
+
+  .hover\:border-color-#{$key}:hover {
+    border-color: $color;
+  }
+
   @if ($color != black and $color != white) {
     @for $i from 1 through 9 {
       .color-light-#{$i*100}-#{$key} {
@@ -32,6 +44,16 @@
         background-color: mix(black, $color, $i * 10);
       }
       .border-color-dark-#{$i*100}-#{$key} {
+        border-color: mix(black, $color, $i * 10);
+      }
+
+      .hover\:color-dark-#{$i*100}-#{$key}:hover {
+        color: mix(black, $color, $i * 10);
+      }
+      .hover\:bg-dark-#{$i*100}-#{$key}:hover {
+        background-color: mix(black, $color, $i * 10);
+      }
+      .hover\:border-color-dark-#{$i*100}-#{$key}:hover {
         border-color: mix(black, $color, $i * 10);
       }
     }
